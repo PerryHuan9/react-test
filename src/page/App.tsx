@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/logo.svg";
 import "./App.scss";
 import AppRouter from "./AppRouter";
+import { ThemeContext } from "../utils/context";
 
 const Header: React.FC = () => {
   return (
@@ -16,10 +17,12 @@ const Header: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Header />
-      <AppRouter />
-    </div>
+    <ThemeContext.Provider value={{ color: "red", backgroundColor: "blue" }}>
+      <div className="App">
+        <Header />
+        <AppRouter />
+      </div>
+    </ThemeContext.Provider>
   );
 };
 

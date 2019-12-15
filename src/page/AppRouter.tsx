@@ -9,6 +9,10 @@ import {
 import TestUseState from "./TestUseState";
 import TestUseEffect from "./TestUseEffect";
 import TestCustomHook from "./TestCustomHook";
+import TestUseReducer from "./TestUserReducer";
+import TestUseCallback from "./TestUseCallback";
+import TestUseMemo from "./TestUseMemo";
+import TestUseContext from "./TestUseContext";
 
 const Home: React.FC = () => (
   <div>
@@ -20,7 +24,11 @@ const ROUTES = [
   { path: "/home", text: "首页", view: Home },
   { path: "/testUseState", text: "TestUseState", view: TestUseState },
   { path: "/testUseEffect", text: "TestUseEffect", view: TestUseEffect },
-  { path: "/testCustomHook", text: "TestCustomHook", view: TestCustomHook }
+  { path: "/testCustomHook", text: "TestCustomHook", view: TestCustomHook },
+  { path: "/testUseReducer", text: "TestUseReducer", view: TestUseReducer },
+  { path: "/testUseCallback", text: "TestUseCallback", view: TestUseCallback },
+  { path: "/testUseMemo", text: "TestUseMemo", view: TestUseMemo },
+  { path: "/testUseContext", text: "TestUseContext", view: TestUseContext }
 ];
 const AppRouter: React.FC = () => {
   return (
